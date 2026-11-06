@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>His Special Day</title>
+    <link rel="stylesheet" href="csshbd2.css">
+    <!-- Font Playfair Display & Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- MUSIK YA INI -->
+    <audio id="bgMusic" loop>
+        <source src="SONG1.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- HATI MELAYANG LAYANG BG -->
+    <div class="heart-container" id="heartContainer"></div>
+
+    <!-- SLIDE SATU,TANGGAL HBDNYA-->
+    <section id="sec-countdown" class="section active">
+        <div class="subtitle">✦ COUNTING DOWN ✦</div>
+        <h1 class="main-title">His Special Day<br><span>is Coming 🕊️</span></h1>
+        <p class="desc">Something beautiful's coming your way ✨</p>
+
+        <div class="countdown-box">
+            <div class="time-item">
+                <span id="days">10</span>
+                <p>Days</p>
+            </div>
+            <span class="colon">:</span>
+            <div class="time-item">
+                <span id="hours">03</span>
+                <p>Hours</p>
+            </div>
+            <span class="colon">:</span>
+            <div class="time-item">
+                <span id="minutes">01</span>
+                <p>Minutes</p>
+            </div>
+            <span class="colon">:</span>
+            <div class="time-item">
+                <span id="seconds">35</span>
+                <p>Seconds</p>
+            </div>
+        </div>
+
+        <button class="btn" onclick="goToSection('sec-gift')">OPEN HIS GIFT 🎁</button>
+    </section>
+
+    <!-- SEKSI 2: GIFT PAGE -->
+    <section id="sec-gift" class="section hidden">
+        <div class="subtitle">✦ GOT SOMETHING FOR YOU ✦</div>
+        <div class="gift-box" onclick="goToSection('sec-header-letter')">
+            <div class="gift-icon">🎁</div>
+            <p>CLICK TO OPEN</p>
+        </div>
+    </section>
+
+    <!-- SEKSI 3: HEADER LETTER & GALLERY BANNER -->
+    <section id="sec-header-letter" class="section hidden">
+        <div class="subtitle">✦ A LOVE LETTER FOR YOU ✦</div>
+        <h1 class="main-title">Your Special Day</h1>
+        <p class="desc">Created with love, just for you 💕</p>
+
+        <!-- Dynamic Photo Grid Sidebar / Gallery Frame -->
+        <div class="polaroid-grid">
+            <div class="polaroid p1"><img src="SLIDE 3 (1).jpeg" alt="Foto"><p>Happy Birthday </p></div>
+        </div>
+
+        <button class="btn" onclick="goToSection('sec-letter-body')">READ BIRTHDAY WISHES 💌</button>
+    </section>
+
+    <!-- SEKSI 4: TYPING LETTER -->
+    <section id="sec-letter-body" class="section hidden">
+        <h2 class="section-title">Happy Birthday</h2>
+        <div class="letter-card">
+            <p id="typedText"></p>
+            <span class="cursor">|</span>
+        </div>
+        <button id="btnMemories" class="btn hidden-btn" onclick="goToSection('sec-gallery')">OUR MEMORIES 📸</button>
+    </section>
+
+    <!-- SEKSI 5: PHOTO GALLERY GRID -->
+    <section id="sec-gallery" class="section hidden">
+        <div class="subtitle">✦ MY FAVORITE HUMAN DUMP ✦</div>
+        <p class="desc">YOU, In Every Mood I Love</p>
+
+        <<div class="video-container">
+            <video controls id="galleryVideo">
+                <source src="SLIDE 5.MP4" type="video/mp4">
+                Browser Anda tidak mendukung video HTML5.
+            </video>
+        </div>
+
+        <button class="btn" onclick="goToSection('sec-video')">A MOMENT FOR YOU 🎬</button>
+    </section>
+
+    <!-- SEKSI 6: VIDEO MESSAGE -->
+    <section id="sec-video" class="section hidden">
+        <h2 class="section-title">A LITTLE BIT OF OUR LDR MOMENTS</h2>
+        <div class="subtitle">✦ Just us on Facetime✦</div>
+
+        <div class="video-container">
+            <video controls id="myVideo">
+                <source src="SLIDE 6.MP4" type="video/mp4">
+                Browser Anda tidak mendukung video HTML5.
+            </video>
+        </div>
+
+        <button class="btn" onclick="goToSection('sec-wishes')">NEXT CHECK LETTER💖</button>
+    </section>
+
+    <!-- SEKSI 7: WISHES CARD (Diubah jadi Foto) -->
+    <section id="sec-wishes" class="section hidden">
+        <div class="wishes-card">
+            <h2>Birthday Wishes</h2>
+            <div class="subtitle">Happy Birthday, my love 💖</div>
+            
+            <!-- Foto pengganti teks panjang -->
+            <div class="wishes-photo-container">
+                <img src="SLIDE 7 (jpg).jpeg" alt="Birthday Photo" class="wishes-img">
+            </div>
+
+            <button class="btn" onclick="goToSection('sec-final')">ONE MORE THING ➔</button>
+        </div>
+    </section>
+
+    <!-- SEKSI 8: FINAL OUTRO PAGE -->
+    <section id="sec-final" class="section hidden">
+        <h1 class="main-title typewriter-title">With All My Love</h1>
+        <p class="desc">Thank you for being part of my life.<br>Even from mile away, your love lights up my life</p>
+        <div class="subtitle">Happy Birthday to the LOML</div>
+          <div class="subtitle">- WITH LOVE AGNES 💕</div>
+
+        <button class="btn" onclick="goToSection('sec-countdown')">🔄 REPLAY FROM START</button>
+    </section>
+
+    <script src="jvhbd2.js"></script>
+</body>
+</html>
